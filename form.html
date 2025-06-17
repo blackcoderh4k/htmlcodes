@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #f8ffae 0%, #43c6ac 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            color: #e70725;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px #fff3;
+            margin-top: 30px;
+        }
+        form {
+            margin: 40px auto;
+            width: 60%;
+            background: rgba(255,255,255,0.85);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            padding-bottom: 30px;
+        }
+        fieldset {
+            margin: 30px auto 20px auto;
+            border-radius: 15px;
+            border-width: 4px !important;
+            box-shadow: 0 2px 10px 0 rgba(80, 96, 243, 0.08);
+            background: linear-gradient(120deg, #fff 70%, #f0f0f0 100%);
+            transition: box-shadow 0.3s;
+        }
+        fieldset:hover {
+            box-shadow: 0 4px 24px 0 rgba(80, 96, 243, 0.18);
+        }
+        legend {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
+            padding: 0 10px;
+            letter-spacing: 1px;
+        }
+        label {
+            display: inline-block;
+            width: 160px;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 6px;
+            vertical-align: top;
+        }
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], textarea {
+            width: 60%;
+            padding: 7px 10px;
+            border: 1.5px solid #bdbdbd;
+            border-radius: 7px;
+            background: #f9f9f9;
+            font-size: 1em;
+            margin-bottom: 10px;
+            transition: border 0.2s;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, input[type="date"]:focus, textarea:focus {
+            border: 1.5px solid #5060f3;
+            background: #eef3ff;
+            outline: none;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            accent-color: #e70725;
+            margin-right: 5px;
+            transform: scale(1.1);
+        }
+        input[type="color"] {
+            border: none;
+            width: 40px;
+            height: 30px;
+            background: none;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        input[type="file"] {
+            border: none;
+            background: none;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 60px;
+            max-height: 150px;
+        }
+        input[type="submit"] {
+            display: block;
+            margin: 30px auto 0 auto;
+            padding: 12px 40px;
+            background: linear-gradient(90deg, #e70725 60%, #5060f3 100%);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: bold;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px #e7072533;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        input[type="submit"]:hover {
+            background: linear-gradient(90deg, #5060f3 60%, #e70725 100%);
+            box-shadow: 0 4px 16px #5060f344;
+        }
+        @media (max-width: 900px) {
+            form {
+                width: 90%;
+            }
+            fieldset {
+                width: 95% !important;
+            }
+            label {
+                width: 120px;
+            }
+            input[type="text"], input[type="email"], input[type="password"], input[type="date"], textarea {
+                width: 70%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Registration Form</h1>
+    <form>
+        <fieldset style="width: 50%; margin: auto; padding: 20px; border: 5px solid #cf7622;">
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" ><br><br>
+
+            <label for="date">Date of Birth :</label>
+            <input type="date" id="date" name="date"><br><br>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label><br><br>
+        </fieldset>
+        <fieldset style="width: 50%; margin: auto; padding: 20px; border: 5px solid #cefa2e;">
+            <legend>Contact Information</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="major">Phone number:</label>
+            <input type="text" id="major" name="major"><br><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+        </fieldset>
+        <fieldset style="width: 50%; margin: auto; padding: 20px; border: 5px solid #5060f3;">
+            <legend>Account Deatils</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password"><br>
+        </fieldset>
+        <fieldset style="width: 50%; margin: auto; padding: 20px; border: 5px solid #e462b9;">
+            <legend>Prefrences</legend>
+            <label for="color">favorite color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="file">Upload Profile Picture:</label>
+            <input type="file" id="file" name="file"><br><br>
+
+            <label for="intrest">Intrests:</label>
+            <input type="checkbox" id="intrest1" name="intrest" value="coding">
+            <label for="intrest1">Reading</label>   
+            <input type="checkbox" id="intrest2" name="intrest" value="sports">
+            <label for="intrest2">Traveling</label>    
+            <input type="checkbox" id="intrest3" name="intrest" value="music">
+            <label for="intrest3">Coading</label><br><br> 
+        </fieldset>
+        <input type="submit" value="Submit" >
+    </form>
+</body>
+
+</html>
