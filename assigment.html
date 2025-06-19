@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Profile Cards</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Algerian, sans-serif;
+            
+        }
+
+        body {
+            background-image: url('wp9174539-pc-anime-couple-wallpapers.jpg');
+            
+            font-family: Arial, sans-serif;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: rgba(157, 215, 233, 0.35); 
+            background-blend-mode:color-burn;
+            
+        }
+
+        .card-container {
+            display: flex;
+            rotate: -35deg;
+            gap :20px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+          
+        }
+
+        .card {
+            background-image: linear-gradient(to bottom, rgba(226, 105, 210, 0.8), rgba(183, 221, 218, 0.911));
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 2px 10px 10px rgba(226, 144, 169, 0.863);
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+        }
+
+        .card-banner {
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid white;
+            position: absolute;
+            top: 90px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-content {
+            padding: 60px 20px 20px;
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .card p {
+            font-family: arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .follow-btn {
+            background-color: #6a0dad;
+            width: 100%;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .follow-btn:hover {
+            background-color: #e961b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+     
+        <div class="card">
+            <div class="card-banner" style="background-image: url('629544.jpg');"></div>
+            <div class="profile-img" style="background-image: url('1343746.png');"></div>
+            <div class="card-content">
+                <h2>demon</h2>
+                <p>Hi there! My name is Anna and I am a beach lover, traveler and professional blogger. Follow me to stay connected.</p>
+                <button class="follow-btn">Follow</button>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-banner" style="background-image: url('wallpaperflare.com_wallpaper (1).jpg');"></div>
+            <div class="profile-img" style="background-image: url('wallpaperflare.com_wallpaper (2).jpg');"></div>
+            <div class="card-content">
+                <h2>Solo leveling</h2>
+                <p>Hi my self the lord irgis! i am bad ass charrateer in solo leveling ghdh ddbndhjds bdbjbsd hjdbjd hjd jdds </p>
+                <button class="follow-btn">Follow</button>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-banner" style="background-image: url('wp9174539-pc-anime-couple-wallpapers.jpg');"></div>
+            <div class="profile-img" style="background-image: url('wallpaperflare.com_wallpaper.jpg');"></div>
+            <div class="card-content">
+                <h2>aot</h2>
+                <p>hii  !! i am erean yeager welcome to my world hope ua re enjoying it     hddhdhchdbcdcdbbddh  dhchd bddd</p>
+                <button class="follow-btn">Follow</button>
+            </div>
+        </div>
+    </div>
+     <script>
+        document.querySelectorAll(".follow-btn").forEach(function (button) {
+          button.addEventListener("click", function () {
+            alert("why you are following this motherfucker, you bitch");
+          });
+        });
+      </script>
+</body>
+</html>
